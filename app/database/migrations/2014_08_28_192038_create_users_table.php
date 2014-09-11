@@ -12,8 +12,18 @@ class CreateUsersTable extends Migration {
 			$table->increments('id');
 			$table->string('use_name');
 			$table->integer('use_cpf')->nullable();
-            $table->integer('use_profile')->nullable();
+            $table->integer('pro_id')->nullable();
 			$table->string('use_password')->nullable();
+
+			$table->timestamps();
+
+			$table->foreign('pro_id')->references('id')->on('profile')->onDelete('restrict');
+		});
+		Schema::create('profile', function($table)
+		{
+			$table->increments('id');
+			$table->string('pro_name');
+
 			$table->timestamps();
 		});
 		Schema::create('candidate', function($table)
@@ -57,6 +67,7 @@ class CreateUsersTable extends Migration {
 	public function down()
 	{
 		Schema::drop('users');
+		Schema::drop('profile');
 		Schema::drop('candidate');
 		Schema::drop('users_evaluations');
 		Schema::drop('users_evaluations_questions');

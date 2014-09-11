@@ -11,8 +11,8 @@
 
 	Route::resource('questions', 'QuestionsController');
 	Route::get('questions/delete/{id}','QuestionsController@destroy');
-    
-     Route::get('/home', function()
+
+    Route::get('/home', function()
     {
         return View::make('home');
     });
@@ -20,7 +20,7 @@
     {
         return View::make('index');
     });
-    
+
 //});
 
 Route::get('login', function()
@@ -32,20 +32,23 @@ Route::post('login','LoginController@postLogin');
 Route::get('inserir', function()
 {
     DB::table('users')->insert(array(
-    'email' => 'lucas_skillo@hotmail.com',
-    'password' => Hash::make('123456'),
-    'use_phone' => '14997901985',
+    'use_password' => Hash::make('123456'),
     'use_name' => 'Lucas de Souza',
     'use_cpf' => '40729933873',
+    'use_profile'=> '1'
     ));
 });
 
- Route::get('/prova', function()
+ Route::get('/prova/index', function()
     {
-        return View::make('prova1');
+        return View::make('candidato/index');
     });
 
  Route::get('/prova/questoes', function()
     {
-        return View::make('prova2');
+        return View::make('candidato/prova');
+    });
+ Route::get('/prova/final', function()
+    {
+        return View::make('candidato/final');
     });
