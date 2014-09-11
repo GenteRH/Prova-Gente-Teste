@@ -1,0 +1,25 @@
+h1
+{
+    font-family: "Arial", "verdana",sans-serif;
+    font-weight: normal;
+}
+h1.blue
+{
+    font-size: 28px;
+}
+h4.blue
+{
+    font-family: "Arial", "verdana",sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+}
+.header blue lighter bigger
+{
+    font-weight: normal;
+}
+h4
+{
+    font-family: "Arial", "verdana",sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+}
