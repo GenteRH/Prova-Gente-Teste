@@ -1,17 +1,41 @@
-#formulario {
-  position: absolute;
-  left: 50%;
-  top:30%;
-  margin-left: -300px;
-  margin-top: -100px;
-  background-color: #FFF;
-  border-radius: 5px;
+ #formulario {
+    position: absolute;
+    left: 46%;
+    top:30%;
+    margin-left: -300px;
+    margin-top: -120px;
+    margin-bottom: 150px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    box-shadow: 6px 6px 6px #000;
+
+}
+#botao {
+    text-align:center;
+    margin-bottom:3%;
+    float:right;
 }
 h1{
-  padding-top: 5x;
-  color: #000;
+    padding-top: 3x;
+    color: #000;
+}
+h3
+{
+    color: #000;
 }
 body
 {
-  background-color: #F5F5F5;
+    background-color: #D3D3D3;
 }
+#forte {
+    border: 0.1em solid #000;
+    color: #000;
+    border-radius: 20px;
+    background-color: #000;
+    margin: 15px 0;
+
+}
+.radio
+      {
+        margin-left: 15px;
+      }

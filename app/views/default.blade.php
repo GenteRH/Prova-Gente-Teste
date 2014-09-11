@@ -89,9 +89,7 @@
             </nav>
 
             <div id="page-wrapper">
-                @section('content')
-
-                @show
+               @yield('content')
             </div>
             <!-- /#page-wrapper -->
         </div>
