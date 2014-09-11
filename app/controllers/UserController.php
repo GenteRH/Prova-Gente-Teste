@@ -20,9 +20,7 @@ class UserController extends \BaseController {
 		$rules = array(
 			'use_name' => 'required',
 			'use_cpf'  => 'required',
-			'email'    => 'required',
-			'password' => 'required',
-            'profile'  => 'required',
+			'use_password' => 'required',
 			);
 
 		$validator = Validator::make(Input::all(), $rules);
@@ -35,10 +33,7 @@ class UserController extends \BaseController {
 			$user = new User;
 			$user->use_name = Input::get('use_name');
 			$user->use_cpf = Input::get('use_cpf');
-			$user->email = Input::get('email');
-			$user->use_phone = Input::get('use_phone');
-            $user->profile = Input::get('profile');
-			$user->password = Input::get('password');
+			$user->use_password = Input::get('use_password');
 			$user->save();
 
       		// Redirect
@@ -65,9 +60,7 @@ class UserController extends \BaseController {
 		$rules = array(
 			'use_name' => 'required',
 			'use_cpf'  => 'required',
-			'email'    => 'required',
-			'password' => 'required',
-            'profile'  => 'required',
+			'use_password' => 'required',
 			);
 
 		$validator = Validator::make(Input::all(), $rules);
@@ -80,10 +73,7 @@ class UserController extends \BaseController {
 			$user = new User;
 			$user->use_name = Input::get('use_name');
 			$user->use_cpf = Input::get('use_cpf');
-			$user->email = Input::get('email');
-			$user->use_phone = Input::get('use_phone');
-            $user->profile = Input::get('profile');
-			$user->password = Input::get('password');
+			$user->use_password = Input::get('use_password');
 			$user->save();
 
       		// Redirect
