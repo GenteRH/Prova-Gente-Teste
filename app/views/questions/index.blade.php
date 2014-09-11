@@ -20,14 +20,14 @@
             <td>ID</td>
             <td>Nome</td>
             <td>Nome da Avaliação</td>
-        <tr>
+        </tr>
     </thred>
     <tbody>
         @foreach ($users as $user)
         <tr>
-            <td><a href="{{ URL::to('users/' . $user->id . '/edit') }}"/> {{ $user -> ID}}</td>
+           <!-- <td><a href="{{ URL::to('users/' . $user->id . '/edit') }}"/> {{ $user -> ID}}</td>
             <td><a href="{{ URL::to('users/' . $user->id . '/edit') }}"/> {{ $user -> Nome}}</td>
-            <td><a href="{{ URL::to('users/' . $user->id . '/edit') }}"/> {{ $user -> Nome da avaliação}}</td>
+            <td><a href="{{ URL::to('users/' . $user->id . '/edit') }}"/> {{ $user -> Nome da avaliação}}</td> -->
         </tr>
         @endforeach
     </tbody>

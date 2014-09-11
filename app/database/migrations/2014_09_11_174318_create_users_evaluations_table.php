@@ -75,7 +75,6 @@ class CreateUsersEvaluationsTable extends Migration {
 			$table->increments('use_eva_que_id');
 			$table->integer('use_eva_id');
 			$table->integer('que_id');
-			$table->string('use_eva_que_alt_correct')->nullable();
 			$table->timestamps();
 
 			$table->foreign('use_eva_id')->references('id')->on('users_evaluations')->onDelete('restrict');

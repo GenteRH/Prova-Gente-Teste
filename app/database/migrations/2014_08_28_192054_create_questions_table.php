@@ -11,6 +11,7 @@ class CreateQuestionsTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('que_name');
+			$table->string('que_alt_correct');
 			$table->timestamps();
 		});
 
