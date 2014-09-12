@@ -65,8 +65,8 @@ class CreateUsersEvaluationsTable extends Migration {
 			$table->string('resp50');
 			$table->timestamps();
 
-			$table->foreign('use_id')->references('id')->on('users')->onDelete('restrict');
-			$table->foreign('eva_id')->references('id')->on('evaluations')->onDelete('restrict');
+			//$table->foreign('use_id')->references('id')->on('users')->onDelete('restrict');
+			//$table->foreign('eva_id')->references('id')->on('evaluations')->onDelete('restrict');
 
 		});
 
@@ -77,8 +77,8 @@ class CreateUsersEvaluationsTable extends Migration {
 			$table->integer('que_id');
 			$table->timestamps();
 
-			$table->foreign('use_eva_id')->references('id')->on('users_evaluations')->onDelete('restrict');
-			$table->foreign('que_id')->references('id')->on('questions')->onDelete('restrict');
+			//$table->foreign('use_eva_id')->references('id')->on('users_evaluations')->onDelete('restrict');
+			//$table->foreign('que_id')->references('id')->on('questions')->onDelete('restrict');
 
 		});
 	}

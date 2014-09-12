@@ -9,13 +9,13 @@ class CreateEvaluationsTable extends Migration {
   {
     Schema::create('evaluations', function($table)
     {
-      $table->increments('eva_id');
+      $table->increments('id');
       $table->integer('que_id');
       $table->string('eva_name');
       $table->string('eva_duration');
       $table->timestamps();
 
-      $table->foreign('que_id')->references('id')->on('questions')->onDelete('restrict');
+      //$table->foreign('que_id')->references('id')->on('questions')->onDelete('restrict');
     });
   }
 

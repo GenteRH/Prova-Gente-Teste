@@ -14,23 +14,48 @@
     {{ Session::get('message') }}
 </div>
 @endif
-
-<table class="table table-striped table-bordered">
-    <thead>
-        <tr>
-            <td>Name</td>
-            <td>Actions</td>
+<button type="button" id="botao" class="btn btn-primary"><i class="fa fa-plus"></i> Criar</button>
+<table class="table table-striped table-hover" id="index" align="center" >
+    <thead align="center">
+        <tr align="center">
+            <th align="center">ID</th>
+            <th>Nome</th>
+            <th>Ações</th>
         </tr>
     </thead>
     <tbody>
-        @foreach ($authors as $author)
-        <tr>
-            <td><a href="{{URL::to('evaluations/' . $evaluation->id. '/edit')}}"/> {{ $evaluation -> name}}</td>
-            <td><a href="{{ URL::to('evaluations/delete/' . $evaluation->id . '/')  }}" class="btn btn-danger">x</a></td>
+        <tr align="center" >
+            <td>01</td>
+            <td>Lucas de Souza</td>
+            <td>
+                <button type="button"  class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-wrench"></i></button>
+                <button type="button"  class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" title="Deletar"><i class="fa fa-times-circle"></i></button>
+            </td>
         </tr>
-        @endforeach
-        ''
+        <tr align="center" >
+            <td>01</td>
+            <td>Lucas de Souza</td>
+            <td>
+                <button type="button"  class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-wrench"></i></button>
+                <button type="button"  class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" title="Deletar"><i class="fa fa-times-circle"></i></button>
+            </td>
+        </tr>
+        <tr align="center" >
+            <td>01</td>
+            <td>Lucas de Souza</td>
+            <td>
+                <button type="button"  class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-wrench"></i></button>
+                <button type="button"  class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" title="Deletar"><i class="fa fa-times-circle"></i></button>
+            </td>
+        </tr>
+        <tr align="center" >
+            <td>01</td>
+            <td>Lucas de Souza</td>
+            <td>
+                <button type="button"  class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-wrench"></i></button>
+                <button type="button"  class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" title="Deletar"><i class="fa fa-times-circle"></i></button>
+            </td>
+        </tr>
     </tbody>
 </table>
-
 @stop

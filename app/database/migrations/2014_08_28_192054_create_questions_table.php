@@ -22,7 +22,7 @@ class CreateQuestionsTable extends Migration {
 			$table->string('alt_name');
 			$table->timestamps();
 
-			$table->foreign('que_id')->references('id')->on('questions')->onDelete('restrict');
+			//$table->foreign('que_id')->references('id')->on('questions')->onDelete('restrict');
 
 		});
 	}

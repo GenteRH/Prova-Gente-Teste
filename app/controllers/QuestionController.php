@@ -4,7 +4,7 @@ class QuestionController extends \BaseController {
 
 	public function index()
 	{
-		$questions = Questions::all();
+		$questions = Question::all();
 		return View::make('questions.index', compact('questions') );
 	}
 
@@ -28,7 +28,7 @@ class QuestionController extends \BaseController {
 			return Redirect::to('questions/create')->withErrors($validator);
 		} else {
       		// store
-			$questions = new Questions;
+			$questions = new Question;
 			$questions->que_name = Input::get('que_name');
 			$questions->save();
 
@@ -45,7 +45,7 @@ class QuestionController extends \BaseController {
 
 	public function edit($id)
 	{
-		$questions = questions::find($id);
+		$questions = Question::find($id);
 		return View::make('questions.edit', compact('questions'));
 	}
 
@@ -64,7 +64,7 @@ class QuestionController extends \BaseController {
 			return Redirect::to('questions/' . $id. '/edit')->withErrors($validator);
 		} else {
       		// store
-			$questions = new questions;
+			$questions = new question;
 			$questions->que_name = Input::get('que_name');
 			$questions->save();
 
@@ -76,7 +76,7 @@ class QuestionController extends \BaseController {
 
 	public function destroy($id)
 	{
-		$questions = Questions::find($id);
+		$questions = Question::find($id);
 		$questions->delete();
 
 		Session::flash('message', 'Successfully deleted the Questions!');

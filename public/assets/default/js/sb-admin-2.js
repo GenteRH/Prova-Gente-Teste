@@ -26,3 +26,6 @@ $(function() {
         }
     })
 })
+$(document).ready(function() {
+    $('#example').dataTable();
+} );

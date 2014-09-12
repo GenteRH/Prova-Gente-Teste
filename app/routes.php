@@ -9,8 +9,8 @@
 	Route::resource('evaluations', 'EvaluationController');
 	Route::get('evaluations/delete/{id}','EvaluationController@destroy');
 
-	Route::resource('questions', 'QuestionsController');
-	Route::get('questions/delete/{id}','QuestionsController@destroy');
+	Route::resource('questions', 'QuestionController');
+	Route::get('questions/delete/{id}','QuestionController@destroy');
 
     Route::get('/home', function()
     {
