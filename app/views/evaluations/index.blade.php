@@ -14,48 +14,44 @@
     {{ Session::get('message') }}
 </div>
 @endif
-<button type="button" id="botao" class="btn btn-primary"><i class="fa fa-plus"></i> Criar</button>
+
+<a href="{{ URL::to('evaluations/create') }}"><button type="button"  id="botao" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Criar</button></a>
 <table class="table table-striped table-hover" id="index" align="center" >
-    <thead align="center">
-        <tr align="center">
-            <th align="center">ID</th>
+    <thead>
+        <tr>
+            <th>ID</th>
             <th>Nome</th>
             <th>Ações</th>
         </tr>
     </thead>
     <tbody>
-        <tr align="center" >
-            <td>01</td>
-            <td>Lucas de Souza</td>
-            <td>
-                <button type="button"  class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-wrench"></i></button>
-                <button type="button"  class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" title="Deletar"><i class="fa fa-times-circle"></i></button>
-            </td>
-        </tr>
-        <tr align="center" >
-            <td>01</td>
-            <td>Lucas de Souza</td>
-            <td>
-                <button type="button"  class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-wrench"></i></button>
-                <button type="button"  class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" title="Deletar"><i class="fa fa-times-circle"></i></button>
-            </td>
-        </tr>
-        <tr align="center" >
-            <td>01</td>
-            <td>Lucas de Souza</td>
-            <td>
-                <button type="button"  class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-wrench"></i></button>
-                <button type="button"  class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" title="Deletar"><i class="fa fa-times-circle"></i></button>
-            </td>
-        </tr>
-        <tr align="center" >
-            <td>01</td>
-            <td>Lucas de Souza</td>
-            <td>
-                <button type="button"  class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-wrench"></i></button>
-                <button type="button"  class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" title="Deletar"><i class="fa fa-times-circle"></i></button>
-            </td>
-        </tr>
-    </tbody>
+        @foreach($evaluations as $key => $value)
+        <tr>
+          <td>{{ $value->id }}</td>
+          <td>{{ $value->eva_name }}</td>
+
+          <!-- we will also add show, edit, and delete buttons -->
+          <td>
+            <a href="{{ URL::to('evaluations/delete/' . $value->id . '/') }}">
+             <button type="submit"  class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" title="Deletar"><i class="fa fa-times-circle"></i></button></a>
+             <!-- edit this nerd (uses the edit method found at GET /nerds/{id}/edit -->
+             <a href="{{ URL::to('evaluations/' . $value->id . '/edit') }}">
+              <button type="button"  class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-wrench"></i></button></a>
+
+          </td>
+      </tr>
+      @endforeach
+  </tbody>
 </table>
+<div class="pagina">
+    <ul class="pagination">
+      <li><a href="#">&laquo;</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">&raquo;</a></li>
+  </ul>
+</div>
 @stop

@@ -1,7 +1,16 @@
 @extends('default')
 
 @section('content')
-{{ Form::open(array('url' => 'evaluations' )) }}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Criar Avaluação</h1>
+    </div>
+</div>
+
+{{ HTML::ul($errors->all() )}}
+
+{{ Form::open(array('url' => 'evaluations')) }}
   
   @include('evaluations._form')
 

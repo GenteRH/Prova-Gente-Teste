@@ -26,8 +26,6 @@
     <script src="{{ asset('assets/default/js/metisMenu.min.js') }}"type='text/javascript'></script>
     <script src="{{ asset('assets/default/js/dataTables.bootstrap.min.js') }}"type='text/javascript'></script>
     <script src="{{ asset('assets/default/js/raphael.min.js') }}"type='text/javascript'></script>
-    <script src="{{ asset('assets/default/js/morris.min.js') }}"type='text/javascript'></script>
-    <script src="{{ asset('assets/default/js/morris-data.js') }}"type='text/javascript'></script>
     <script src="{{ asset('assets/default/js/ace-extra.min.js') }}" type='text/javascript'></script>
     <script src="{{ asset('assets/default/js/sb-admin-2.js') }}" type='text/javascript'></script>
 
@@ -70,7 +68,7 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="#"><i class="fa fa-tachometer"></i>   Cadastro<span class="fa arrow down"></span></a>
+                            <a href=""><i class="fa fa-tachometer"></i>   Cadastro<span class="fa arrow down"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="{{ URL::to('evaluations/') }}"><i class="fa fa-angle-double-right"></i>   Avaliação</a>

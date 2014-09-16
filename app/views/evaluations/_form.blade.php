@@ -1,27 +1,30 @@
-<div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">Criar Avaliação</h1>
+
+<div class="form-group">
+    <label for="eva_name" class="col-sm-2 control-label">Nome</label>
+    <div class="col-sm-8">
+        <input type="text" class="form-control" id="eva_name" placeholder="Nome">
     </div>
 </div>
-<hr>
-<form class="form-horizontal" role="form">
-    <div class="form-group">
-        <label for="eva_name" class="col-sm-2 control-label">Nome</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="eva_name" placeholder="Nome">
+<div class="form-group">
+    <label for="eva_duration" class="col-sm-2 control-label">Tempo de Avalação</label>
+    <div class="col-sm-3">
+        <div class="input-group">
+            <input type="number"min="0" max="120"class="form-control" name="duration" id="duration">
+            <span class="input-group-addon">Minutos</span>
         </div>
     </div>
-    <div class="form-group">
-        <div class="col-sm-8">
-            <label for="eva_name" class="col-sm-2 control-label">Tempo</label>
-            <input type="number" id="musicas" name="musicas" min="2" max="8"/>
-            <div class="input-group-addon">Horas</div>
-        </div>
+</div>
+<div class="form-group">
+    <label for="eva_name" class="col-sm-2 control-label">Perguntas</label>
+    <div class="col-sm-8">
+        <select class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
     </div>
-    <div class="form-group">
-        <label for="que_id" class="col-sm-2 control-label">Perguntas</label>
-        <div class="col-sm-8">
-            <select class="form-control" placeholder="Perguntas" id="que_id"></select>
-        </div>
-    </div>
-</form>
+</div>
+<br>
+<br>

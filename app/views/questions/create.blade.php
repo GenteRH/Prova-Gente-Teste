@@ -5,7 +5,7 @@
 
   @include('questions._form')
 
-{{ Form::submit('Cadastrar', array('class' => 'btn btn-success'))}}
-{{ Form::button('Cancelar', array('class' => 'btn btn-danger'))}}
+<button type="submit" class="btn btn-success btn-sm"><i class="fa fa-check-circle"></i> Cadastrar</button>
+<button type="button" class="btn btn-danger btn-sm"><i class="fa fa-times-circle"></i> Cancelar</button>
 {{ Form::close() }}
 @stop

@@ -5,7 +5,7 @@ class EvaluationController extends \BaseController {
 	public function index()
 	{
 		$evaluations = Evaluation::all();
-		return View::make('evaluations.index', compact('evaluations') );
+		return View::make('evaluations.index')->with('evaluations', $evaluations);
 	}
 
 	public function create()
@@ -19,7 +19,7 @@ class EvaluationController extends \BaseController {
    		 // read more on validation at http://laravel.com/docs/validation
 		$rules = array(
 			'eva_name'        => 'required',
-			'eva_duration'    => 'required'
+			'eva_duration'    => 'required|numeric',
 			);
 
 		$validator = Validator::make(Input::all(), $rules);
@@ -49,7 +49,7 @@ class EvaluationController extends \BaseController {
 	public function edit($id)
 	{
 		$evaluation = Evaluation::find($id);
-		return View::make('evaluations.edit', compact('evaluation'));
+		return View::make('evaluations.edit')->with('evaluation', $evaluation);
 	}
 
 	public function update($id)
@@ -58,7 +58,7 @@ class EvaluationController extends \BaseController {
    		 // read more on validation at http://laravel.com/docs/validation
 		$rules = array(
 			'eva_name'        => 'required',
-			'eva_duration'    => 'required'
+			'eva_duration'    => 'required|numeric',
 			);
 
 		$validator = Validator::make(Input::all(), $rules);
@@ -68,7 +68,7 @@ class EvaluationController extends \BaseController {
 			return Redirect::to('evaluations/' . $id. '/edit')->withErrors($validator);
 		} else {
       		// store
-			$evaluation = new Evaluation;
+			$evaluation = Evaluation::find($id);
 			$evaluation->eva_name = Input::get('eva_name');
 			$evaluation->eva_duration = Input::get('eva_duration');
 			$evaluation->questions_id = Input::get('questions_id');
@@ -82,8 +82,8 @@ class EvaluationController extends \BaseController {
 
 	public function destroy($id)
 	{
-		$evaluations = Evaluations::find($id);
-		$evaluations->delete();
+		$evaluation = Evaluation::find($id);
+		$evaluation->delete();
 
 		Session::flash('message', 'Successfully deleted the Evaluations!');
 		return Redirect::to('evaluations');

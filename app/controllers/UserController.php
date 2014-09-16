@@ -2,25 +2,41 @@
 
 class UserController extends \BaseController {
 
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return Response
+	 */
 	public function index()
 	{
 		$users = User::all();
-		return View::make('users.index', compact('users') );
+		return View::make('users.index')->with('users', $users);
 	}
 
+	/**
+	 * Show the form for creating a new resource.
+	 *
+	 * @return Response
+	 */
 	public function create()
 	{
 		return View::make('users.create');
 	}
 
+	/**
+	 * Store a newly created resource in storage.
+	 *
+	 * @return Response
+	 */
 	public function store()
 	{
 		// Validate
    		 // read more on validation at http://laravel.com/docs/validation
 		$rules = array(
-			'use_name' => 'required',
-			'use_cpf'  => 'required',
-			'use_password' => 'required',
+			'use_name'      => 'required',
+			'use_password'  => 'required',
+			'use_email'     => 'required',
+
 			);
 
 		$validator = Validator::make(Input::all(), $rules);
@@ -34,10 +50,13 @@ class UserController extends \BaseController {
 			$user->use_name = Input::get('use_name');
 			$user->use_cpf = Input::get('use_cpf');
 			$user->use_password = Input::get('use_password');
+			$user->use_email = Input::get('use_email');
+			$user->use_cel_prone = Input::get('use_cel_prone');
+			$user->use_phone = Input::get('use_phone');
 			$user->save();
 
       		// Redirect
-			Session::flash('message', 'Successfully created user!');
+			Session::flash('message', 'Usuário Criado com Sucesso!');
 			return Redirect::to('users');
 		}
 	}
@@ -49,8 +68,12 @@ class UserController extends \BaseController {
 
 	public function edit($id)
 	{
-		$user = user::find($id);
-		return View::make('users.edit', compact('user'));
+		// get the user
+		$user = User::find($id);
+
+		// show the edit form and pass the user
+		return View::make('users.edit')
+			->with('user', $user);
 	}
 
 	public function update($id)
@@ -58,9 +81,12 @@ class UserController extends \BaseController {
 		// Validate
    		 // read more on validation at http://laravel.com/docs/validation
 		$rules = array(
-			'use_name' => 'required',
-			'use_cpf'  => 'required',
-			'use_password' => 'required',
+			'use_name'      => 'required',
+			'use_cpf'       => 'required|numeric',
+			'use_password'  => 'required',
+			'use_email'     => 'required',
+			'use_cel_prone' => 'required',
+			'use_phone'     => 'required',
 			);
 
 		$validator = Validator::make(Input::all(), $rules);
@@ -70,24 +96,27 @@ class UserController extends \BaseController {
 			return Redirect::to('users/' . $id. '/edit')->withErrors($validator);
 		} else {
       		// store
-			$user = new User;
+			$user = User::find($id);
 			$user->use_name = Input::get('use_name');
 			$user->use_cpf = Input::get('use_cpf');
 			$user->use_password = Input::get('use_password');
+			$user->use_email = Input::get('use_email');
+			$user->use_cel_prone = Input::get('use_cel_prone');
+			$user->use_phone = Input::get('use_phone');
 			$user->save();
 
       		// Redirect
-			Session::flash('message', 'Successfully created User!');
+			Session::flash('message', 'Usuário editado com sucesso!');
 			return Redirect::to('users');
 		}
 	}
 
 	public function destroy($id)
 	{
-		$users = Users::find($id);
-		$users->delete();
+		$user = User::find($id);
+		$user->delete();
 
-		Session::flash('message', 'Successfully deleted the Users!');
+		Session::flash('message', 'Usuário deletado com sucesso!');
 		return Redirect::to('users');
 	}
 

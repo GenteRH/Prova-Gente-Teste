@@ -3,76 +3,48 @@
         <h1 class="page-header">Criar Questão</h1>
     </div>
 </div>
-<hr>
-<div class="row">
-    <form class="form-horizontal" role="form">
-        <div class="form-group">
-            <label for="question" class="col-sm-2 control-label">Pergunta</label>
-            <div class="col-sm-6">
-                <textarea class="form-control" rows="3" id="name" placeholder="Pergunta"></textarea>
-            </div>
+{{ HTML::ul($errors->all()) }}
+<form class="form-horizontal" role="form">
+    <div class="form-group">
+        <label for="use_name" class="col-sm-2 control-label">Pergunta</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" id="use_name" placeholder="Pergunta" rows="2"></textarea>
         </div>
-        <div class="form-group">
-            <label for="first_alternative" class="col-sm-2 control-label">1º Alternativa</label>
-            <div class="col-sm-6">
-                <textarea class="form-control" rows="3" id="first_alternative" placeholder="1º Alternativa"></textarea>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="correct" id="correct1" value="alternativa1" checked>
-                    Alternatia Correta
-                </label>
-            </div>
+    </div>
+    <div class="form-group">
+        <label for="use_name" class="col-sm-2 control-label">1)Alternativa</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" id="use_name" placeholder="Pergunta" rows="2"></textarea>
         </div>
-        <div class="form-group">
-            <label for="second_alternative" class="col-sm-2 control-label">2º Alternativa</label>
-            <div class="col-sm-6">
-                <textarea class="form-control" rows="3" id="second_alternative" placeholder="2º Alternativa"></textarea>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="correct" id="correct1" value="alternatia2" checked>
-                    Alternatia Correta
-                </label>
-            </div>
+    </div>
+    <div class="form-group">
+        <label for="use_name" class="col-sm-2 control-label">2)Alternativa</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" id="use_name" placeholder="Pergunta" rows="2"></textarea>
         </div>
-        <div class="form-group">
-            <label for="third_alternative" class="col-sm-2 control-label">3º Alternativa</label>
-            <div class="col-sm-6">
-                <textarea class="form-control" rows="3" id="third_alternative" placeholder="3º Alternativa"></textarea>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="correct" id="correct1" value="alternatia3" checked>
-                    Alternatia Correta
-                </label>
-            </div>
+    </div>
+    <div class="form-group">
+        <label for="use_name" class="col-sm-2 control-label">3)Alternativa</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" id="use_name" placeholder="Pergunta" rows="2"></textarea>
         </div>
-        <div class="form-group">
-            <label for="fourth_alternative" class="col-sm-2 control-label">4º Alternativa</label>
-            <div class="col-sm-6">
-                <textarea class="form-control" rows="3" id="fourth_alternative" placeholder="4º Alternativa"></textarea>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="correct" id="correct1" value="alternatia4" checked>
-                    Alternatia Correta
-                </label>
-            </div>
+    </div>
+    <div class="form-group">
+        <label for="use_name" class="col-sm-2 control-label">4)Alternativa</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" id="use_name" placeholder="Pergunta" rows="2"></textarea>
         </div>
-        <div class="form-group">
-            <label for="fifth_alternative" class="col-sm-2 control-label">5º Alternativa</label>
-            <div class="col-sm-6">
-                <textarea class="form-control" rows="3" id="fifth_alternative" placeholder="5º Alternativa"></textarea>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="correct" id="correct1" value="alternatia5" checked>
-                    Alternatia Correta
-                </label>
-            </div>
+    </div>
+    <div class="form-group">
+        <label for="use_name" class="col-sm-2 control-label">5)Alternativa</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" id="use_name" placeholder="Pergunta" rows="2"></textarea>
         </div>
-        <br>
-    </form>
-</div>
-
+    </div>
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

@@ -2,12 +2,12 @@
 
 @section('content')
 
-{{ Form::model($user, array('route' => array('users.update', $users->id), 'method' => 'PUT')) }}
-    
+{{ Form::model($user, array('action' => array('UserController@update', $user->id), 'method' => 'PUT')) }}
+
     @include('users._form')
 
-{{ Form::submit('Cadastrar', array('class' => 'btn btn-success') ('class' => 'fa fa-check'))}}
-{{ Form::button('Cancelar', array('class' => 'btn btn-danger') ('class' => 'fa fa-times'))}}
+<button type="submit" class="btn btn-success btn-sm"><i class="fa fa-check-circle"></i> Alterar</button>
+<button type="button" class="btn btn-danger btn-sm"><i class="fa fa-times-circle"></i> Cancelar</button>
 {{ Form::close() }}
 
 @stop

@@ -2,11 +2,11 @@
 
 @section('content')
 
-{{ Form::model($question, array('route' => array('questions.update', $questions->id), 'method' => 'PUT')) }}
+{{ Form::model($question, array('route' => array('questions.update', $question->id), 'method' => 'PUT')) }}
     
     @include('questions._form')
 
-{{ Form::submit('Cadastrar', array('class' => 'btn btn-success') ('class' => 'fa fa-check')) }}
-{{ Form::button('Cancelar', array('class' => 'btn btn-danger') ('class' => 'fa fa-times')) }}
+<button type="submit" class="btn btn-success btn-sm"><i class="fa fa-check-circle"></i> Alterar</button>
+<button type="button" class="btn btn-danger btn-sm"><i class="fa fa-times-circle"></i> Cancelar</button>
 {{ Form::close() }}
 @stop
