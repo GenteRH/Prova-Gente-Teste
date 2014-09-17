@@ -1,30 +1,29 @@
 
 <div class="form-group">
     <label for="eva_name" class="col-sm-2 control-label">Nome</label>
-    <div class="col-sm-8">
-        <input type="text" class="form-control" id="eva_name" placeholder="Nome">
+    <div class="col-sm-6">
+        <input type="text" class="form-control" id="eva_name" placeholder="Nome" value="{{ Input::old('eva_name')}}" required>
     </div>
 </div>
 <div class="form-group">
-    <label for="eva_duration" class="col-sm-2 control-label">Tempo de Avalação</label>
-    <div class="col-sm-3">
+    <label for="eva_duration" class="col-sm-2 control-label">Duração</label>
+    <div class="col-sm-2">
         <div class="input-group">
-            <input type="number"min="0" max="120"class="form-control" name="duration" id="duration">
-            <span class="input-group-addon">Minutos</span>
+            <input type="number" class="form-control" id="eva_duration" min="0" max="120" value="{{ Input::old('eva_duration')}}" required>
+            <div class="input-group-addon">Min</div>
         </div>
     </div>
 </div>
 <div class="form-group">
-    <label for="eva_name" class="col-sm-2 control-label">Perguntas</label>
-    <div class="col-sm-8">
-        <select class="form-control">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-        </select>
+    <label for="que_id" class="col-sm-2 control-label">Portugês</label>
+    <div class="col-sm-3">
+        <input type="select" class="form-control" id="que_id" value="{{ Input::old('use_email')}}" required>
     </div>
 </div>
-<br>
+<div class="form-group">
+    <label for="que_id" class="col-sm-2 control-label">Matemática</label>
+    <div class="col-sm-3">
+        <input type="select" class="form-control" id="que_id" value="{{ Input::old('use_email')}}" required>
+    </div>
+</div>
 <br>

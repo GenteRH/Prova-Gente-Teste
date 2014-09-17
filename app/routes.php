@@ -12,6 +12,8 @@
 	Route::resource('questions', 'QuestionController');
 	Route::get('questions/delete/{id}','QuestionController@destroy');
 
+    Route::resource('results', 'ResultController');
+
     Route::get('/home', function()
     {
         return View::make('home');

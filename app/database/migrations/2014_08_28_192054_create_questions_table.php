@@ -10,27 +10,23 @@ class CreateQuestionsTable extends Migration {
 		Schema::create('questions', function($table)
 		{
 			$table->increments('id');
+
 			$table->string('que_name');
 			$table->string('que_alt_correct');
+			$table->string('que_category');
+			$table->string('que_alt_1');
+			$table->string('que_alt_2');
+			$table->string('que_alt_3');
+			$table->string('que_alt_4');
+			$table->string('que_alt_5');
+
 			$table->timestamps();
-		});
-
-		Schema::create('alternative', function($table)
-		{
-			$table->increments('id');
-			$table->integer('que_id');
-			$table->string('alt_name');
-			$table->timestamps();
-
-			//$table->foreign('que_id')->references('id')->on('questions')->onDelete('restrict');
-
 		});
 	}
 
 	public function down()
 	{
 		Schema::drop('questions');
-		Schema::drop('alternative');
 	}
 
 }

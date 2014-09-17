@@ -17,6 +17,7 @@
     <link href="{{ asset('assets/default/css/timeline.css') }}" rel="stylesheet" type='text/css'>
     <link href="{{ asset('assets/default/css/sb-admin-2.css') }}" rel="stylesheet" type='text/css'>
     <link href="{{ asset('assets/default/css/morris.css') }}" rel="stylesheet" type='text/css'>
+    <link href="{{ asset('assets/default/css/select2.css') }}" rel="stylesheet" type='text/css'>
     <link href="{{ asset('assets/default/font-awesome/font-awesome.min.css') }}" rel="stylesheet" type='text/css'>
 
     <!-- JS -->
@@ -24,6 +25,7 @@
     <script src="{{ asset('assets/default/js/jquery-1.11.0.js') }}"type='text/javascript'></script>
     <script src="{{ asset('assets/default/js/bootstrap.min.js')}}"type='text/javascript'></script>
     <script src="{{ asset('assets/default/js/metisMenu.min.js') }}"type='text/javascript'></script>
+    <script src="{{ asset('assets/default/js/select2.js')}}"type='text/javascript'></script>
     <script src="{{ asset('assets/default/js/dataTables.bootstrap.min.js') }}"type='text/javascript'></script>
     <script src="{{ asset('assets/default/js/raphael.min.js') }}"type='text/javascript'></script>
     <script src="{{ asset('assets/default/js/ace-extra.min.js') }}" type='text/javascript'></script>
@@ -82,7 +84,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="{{ URL::to('#') }}"><i class="fa fa-file-text-o"></i>    Resultados</a>
+                            <a href="{{ URL::to('results/') }}"><i class="fa fa-file-text-o"></i>    Resultados</a>
                         </li>
                     </ul>
                 </div>

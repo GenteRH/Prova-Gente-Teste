@@ -5,8 +5,8 @@ class LoginController extends \BaseController {
     public function postLogin()
     {
         $user = array(
-            'email'   => Input::get('email'),
-            'password'   => Input::get('password')
+            'use_email'   => Input::get('use_email'),
+            'use_password'   => Input::get('use_password')
         );
         
         //tenta logar o usuário

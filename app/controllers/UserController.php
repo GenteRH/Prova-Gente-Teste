@@ -36,7 +36,6 @@ class UserController extends \BaseController {
 			'use_name'      => 'required',
 			'use_password'  => 'required',
 			'use_email'     => 'required',
-
 			);
 
 		$validator = Validator::make(Input::all(), $rules);
@@ -51,7 +50,7 @@ class UserController extends \BaseController {
 			$user->use_cpf = Input::get('use_cpf');
 			$user->use_password = Input::get('use_password');
 			$user->use_email = Input::get('use_email');
-			$user->use_cel_prone = Input::get('use_cel_prone');
+			$user->use_cel_phone = Input::get('use_cel_phone');
 			$user->use_phone = Input::get('use_phone');
 			$user->save();
 
@@ -63,15 +62,12 @@ class UserController extends \BaseController {
 
 	public function show($id)
 	{
-		
+
 	}
 
 	public function edit($id)
 	{
-		// get the user
 		$user = User::find($id);
-
-		// show the edit form and pass the user
 		return View::make('users.edit')
 			->with('user', $user);
 	}
@@ -82,11 +78,8 @@ class UserController extends \BaseController {
    		 // read more on validation at http://laravel.com/docs/validation
 		$rules = array(
 			'use_name'      => 'required',
-			'use_cpf'       => 'required|numeric',
 			'use_password'  => 'required',
 			'use_email'     => 'required',
-			'use_cel_prone' => 'required',
-			'use_phone'     => 'required',
 			);
 
 		$validator = Validator::make(Input::all(), $rules);
@@ -101,7 +94,7 @@ class UserController extends \BaseController {
 			$user->use_cpf = Input::get('use_cpf');
 			$user->use_password = Input::get('use_password');
 			$user->use_email = Input::get('use_email');
-			$user->use_cel_prone = Input::get('use_cel_prone');
+			$user->use_cel_phone = Input::get('use_cel_phone');
 			$user->use_phone = Input::get('use_phone');
 			$user->save();
 

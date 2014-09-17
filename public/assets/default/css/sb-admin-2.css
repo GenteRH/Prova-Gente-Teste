@@ -4,20 +4,27 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-body {
+ body {
     background-color: #f8f8f8;
 }
 
 #wrapper {
     width: 100%;
 }
+label
+{
+    text-align:left;
+}
+#correct {
+    margin-right: 15px;
+}
 .page-header
 {
     margin-top: 80px;;
 }
 textarea.form-control {
-height: auto;
-margin-bottom: 15px;
+    height: auto;
+    margin-bottom: 15px;
 }
 #page-wrapper {
     padding: 0 15px;
@@ -238,7 +245,7 @@ margin-bottom: 15px;
     padding: ;
 }
 table#index {
-text-align:center;
+    text-align:center;
 }
 #index
 {

@@ -2,12 +2,17 @@
 
 @section('content')
 
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Editar Usuário {{$user->use_name}}</h1>
+    </div>
+</div>
+
 {{ Form::model($user, array('action' => array('UserController@update', $user->id), 'method' => 'PUT')) }}
 
     @include('users._form')
 
-<button type="submit" class="btn btn-success btn-sm"><i class="fa fa-check-circle"></i> Alterar</button>
-<button type="button" class="btn btn-danger btn-sm"><i class="fa fa-times-circle"></i> Cancelar</button>
+{{ Form::submit('Cadastrar', array('class' => 'btn btn-success')) }}
+{{ Form::button('Cancelar', array('class' => 'btn btn-danger')) }}
 {{ Form::close() }}
-
 @stop

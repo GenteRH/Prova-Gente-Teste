@@ -10,9 +10,10 @@ class CreateUsersEvaluationsTable extends Migration {
 	{
 		Schema::create('users_evaluations', function($table)
 		{
-			$table->increments('use_eva_id');
-			$table->integer('use_id');
-            $table->integer('eva_id');
+			$table->increments('id');
+
+			$table->integer('use_id',false,true);
+            $table->integer('eva_id',false,true);
 			$table->string('resp1');
 			$table->string('resp2');
 			$table->string('resp3');
@@ -65,20 +66,20 @@ class CreateUsersEvaluationsTable extends Migration {
 			$table->string('resp50');
 			$table->timestamps();
 
-			//$table->foreign('use_id')->references('id')->on('users')->onDelete('restrict');
-			//$table->foreign('eva_id')->references('id')->on('evaluations')->onDelete('restrict');
+			$table->foreign('use_id')->references('id')->on('users')->onDelete('restrict');
+			$table->foreign('eva_id')->references('id')->on('evaluations')->onDelete('restrict');
 
 		});
 
 		Schema::create('users_evaluations_questions', function($table)
 		{
 			$table->increments('use_eva_que_id');
-			$table->integer('use_eva_id');
-			$table->integer('que_id');
+			$table->integer('use_eva_id',false,true);
+			$table->integer('que_id',false,true);
 			$table->timestamps();
 
-			//$table->foreign('use_eva_id')->references('id')->on('users_evaluations')->onDelete('restrict');
-			//$table->foreign('que_id')->references('id')->on('questions')->onDelete('restrict');
+			$table->foreign('use_eva_id')->references('id')->on('users_evaluations')->onDelete('restrict');
+			$table->foreign('que_id')->references('id')->on('questions')->onDelete('restrict');
 
 		});
 	}

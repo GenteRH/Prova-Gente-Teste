@@ -1,5 +1,5 @@
 <?php
-class Evaluation extends Eloquent
+class Question extends Eloquent
 {
 	protected $table="questions";
 }

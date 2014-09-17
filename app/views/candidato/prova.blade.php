@@ -165,7 +165,9 @@
     </label>
   </div>
   <div align=bottom>
-    <a href="{{ URL::to('prova/final') }}"/><button type="button" class="btn btn-success" id="botao">Finalizar</button>
+    <a href="{{ URL::to('prova/final') }}"/><button type="button" class="btn btn-danger btn-lg" id="botao">Finalizar <i class="fa fa-check-square"></i> </button>
   </div>
 </div>
+<br>
+<br>
 @stop
