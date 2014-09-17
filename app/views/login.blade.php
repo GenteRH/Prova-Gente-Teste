@@ -51,8 +51,8 @@
                                 <div class="center">
                                     <h1>
                                         <img src="{{ asset('assets/img/logo-mini.png') }}" width="30px" alt="logo-mini" class="img-circle">
-                                        <span class="blue">SGRS</span><br/>
-                                        <span class="white">Sistema de Gestão de Recrutamento e Seleção</span>
+                                        <span class="blue">SAO</span><br/>
+                                        <span class="white">Sistema de Avaliação Objetiva</span>
                                     </h1>
                                     <h4 class="blue">&copy; Gente Recursos Humanos</h4>
                                 </div>
